@@ -1,0 +1,7 @@
+[init]
+	defaultBranch = master
+[credential]
+	helper = osxkeychain
+[user]
+	email = amund.fremming@gmail.com
+	name = amund-fremming
