@@ -25,4 +25,11 @@ sudo npm i -g typescript
 
 
 echo "Installering fullført!"
+echo "Sjekk at alle versjoner er riktige!"
+
+dotnet --version
+node --version
+tsc -- version
+react-native --version
+
 
