@@ -4,6 +4,7 @@
 sudo apt update && sudo apt upgrade -y
 
 # Installerer nødvendige programmer og verktøy
+sudo snap install obsidian --classic
 sudo apt install -y git
 sudo apt install -y tmux
 sudo apt install -y postgresql postgresql-contrib
