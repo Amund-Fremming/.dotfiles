@@ -10,6 +10,7 @@ sudo apt install -y tmux
 sudo apt install -y postgresql postgresql-contrib
 sudo systemctl enable postgresql.service
 sudo systemctl start postgresql.service
+sudo apt install flameshot
 
 # For .NET SDK, må vi legge til Microsofts pakkekilde og importere nøkkelen
 wget https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
@@ -33,4 +34,4 @@ node --version
 tsc -- version
 react-native --version
 
-
+echo "Remember to set keyboard shortcut for flameshot!"
