@@ -11,6 +11,7 @@ sudo apt install -y postgresql postgresql-contrib
 sudo systemctl enable postgresql.service
 sudo systemctl start postgresql.service
 sudo apt install flameshot
+snap install spotify
 
 # Set flameshot keymap
 gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
