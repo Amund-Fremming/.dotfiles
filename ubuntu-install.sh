@@ -11,7 +11,11 @@ sudo apt install -y postgresql postgresql-contrib
 sudo systemctl enable postgresql.service
 sudo systemctl start postgresql.service
 sudo apt install flameshot
-snap install spotify
+sudo snap install spotify
+sudo snap install discord
+
+sudo apt update
+sudo apt install build-essential
 
 # For setting up custom shortcuts to toggle screens
 sudo apt-get install wmctrl
