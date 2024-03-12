@@ -34,7 +34,16 @@ sudo dpkg -i packages-microsoft-prod.deb
 rm packages-microsoft-prod.deb
 sudo apt update
 sudo apt install -y apt-transport-https
-sudo apt install -y dotnet-sdk-6.0 # Juster versjonen etter behov
+sudo snap install ruby --classic
+
+## HomeBrew
+sudo apt-get install build-essential curl file git -y
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Add Homebrew to PATH in .bashrc or .zshrc depending on your shell
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zshrc
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Installerer Node.js og NPM
 sudo snap install node --classic
