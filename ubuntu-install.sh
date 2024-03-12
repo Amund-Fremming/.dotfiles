@@ -13,6 +13,9 @@ sudo systemctl start postgresql.service
 sudo apt install flameshot
 snap install spotify
 
+# For setting up custom shortcuts to toggle screens
+sudo apt-get install wmctrl
+
 # Set flameshot keymap
 gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
 
