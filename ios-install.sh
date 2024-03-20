@@ -5,6 +5,8 @@ if ! command -v brew &> /dev/null
 then
     echo "Homebrew ikke funnet. Installerer Homebrew..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zshrc
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # Oppdater Homebrew og oppgradere eventuelle allerede installerte pakker
@@ -25,33 +27,35 @@ fi
 cp ~/.dotfiles/zshrc ~/.zshrc
 
 # Installere programmer og verktøy
+brew install java
 brew install git
 brew install neovim
 brew install tmux
 brew install postgresql
-brew services start postgresql
-brew install --cask dotnet-sdk
+brew install pgadmin4
+brew install dotnet 
 brew install node
-npm install -g react-native-cli
-npm install -g typescript
-npm install -g expo-cli
-npm install -g vite
 
-# Mulig noe manuell interaksjon
+# GUI-applikasjoner med 
+brew install iterm2
+brew install visual-studio-code
+brew install discord
+brew install spotify
+brew install obsidian
+brew install xcode
+brew install brave-browser
+brew install pgadmin4
+
 xcode-select --install
-echo "Følg med på xcode installasjonen, kan være noe manuelt!"
 
+# Tools for workflow, hammerspoon krever configurering
+brew install --cask hammerspoon
 
-# GUI-applikasjoner med cask
-brew install --cask iterm2
-brew install --cask visual-studio-code
-brew install --cask discord
-brew install --cask spotify
-brew install --cask obsidian
-brew install --cask xcode
-brew install --cask brave-browser
-brew install --cask pgadmin4
-
-echo "Sjekk at riktig versjon av .NET (dotnet 8) er installert. Om nødvendig, last ned spesifikk versjon fra Microsofts offisielle nettside."
-echo "Husk å åpne Xcode og last ned nødvendige simulatorer gjennom Xcode Preferences -> Components."
 echo "Installering fullført!"
+echo "versjoner: "
+dotnet --version
+node --version
+npm --version
+nvim --version
+java --version
+
